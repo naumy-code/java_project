@@ -1,0 +1,13 @@
+spring:
+  redis:
+    database: 6
+    #host: 192.168.103.202
+    host: 127.0.0.1
+    password: Tstar_123
+    #port: 6379
+    port: 46379
+    timeout: 3000
+    pool:
+      max-idle: 100
+      min-idle: 0
+      max-wait: 5000
