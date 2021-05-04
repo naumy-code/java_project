@@ -1,4 +1,4 @@
-package com.example.demo;
+package May;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class ShowMeBug {
      * 要求表头按照时间排序。如果某天没有排班，则表格不展示该列。某天某时间无数据则显示无排班。
      * 上午下午晚上通过Vo中的seqNo排序。
      * eg:
-     * 	      2020-05-31 2020-06-01	2020-06-02 2020-06-04
+     * 2020-05-31 2020-06-01	2020-06-02 2020-06-04
      * 上午	 李四       赵六	   张三	     无排班
      * 下午	 赵六       张三	   赵六	     张三
      * 晚上	 孙七	      张三	   无排班	    张三
@@ -30,10 +30,10 @@ public class ShowMeBug {
 
     public static List<TimeRangeVo> getTimeRangeVoList() {
         List<TimeRangeVo> timeRangeVoList = new ArrayList<TimeRangeVo>();
-        timeRangeVoList.add(new TimeRangeVo("下午", 3));
-        timeRangeVoList.add(new TimeRangeVo("中午", 2));
-        timeRangeVoList.add(new TimeRangeVo("上午", 1));
-        timeRangeVoList.add(new TimeRangeVo("晚上", 4));
+        timeRangeVoList.add(new TimeRangeVo("下午",3));
+        timeRangeVoList.add(new TimeRangeVo("中午",2));
+        timeRangeVoList.add(new TimeRangeVo("上午",1));
+        timeRangeVoList.add(new TimeRangeVo("晚上",4));
 
         return timeRangeVoList;
     }
@@ -41,26 +41,26 @@ public class ShowMeBug {
     public static List<SchemaVo> getSchemaVoList() {
         List<SchemaVo> schemaVoList = new ArrayList<SchemaVo>();
 
-        schemaVoList.add(new SchemaVo("王五", "下午", "2020-06-04"));
-        schemaVoList.add(new SchemaVo("张三", "上午", "2020-06-02"));
-        schemaVoList.add(new SchemaVo("赵六", "下午", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("李四", "下午", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("王五", "下午", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("王五", "下午", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("李四", "下午", "2020-06-02"));
-        schemaVoList.add(new SchemaVo("李四", "下午", "2020-06-04"));
-        schemaVoList.add(new SchemaVo("孙七", "晚上", "2020-06-04"));
-        schemaVoList.add(new SchemaVo("张三", "下午", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("赵六", "晚上", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("张三", "晚上", "2020-06-04"));
-        schemaVoList.add(new SchemaVo("李四", "上午", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("赵六", "上午", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("张三", "下午", "2020-06-01"));
-        schemaVoList.add(new SchemaVo("赵六", "下午", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("张三", "下午", "2020-06-02"));
-        schemaVoList.add(new SchemaVo("王五", "上午", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("孙七", "晚上", "2020-05-31"));
-        schemaVoList.add(new SchemaVo("张三", "晚上", "2020-06-01"));
+        schemaVoList.add(new SchemaVo("王五","下午","2020-06-04"));
+        schemaVoList.add(new SchemaVo("张三","上午","2020-06-02"));
+        schemaVoList.add(new SchemaVo("赵六","下午","2020-06-01"));
+        schemaVoList.add(new SchemaVo("李四","下午","2020-06-01"));
+        schemaVoList.add(new SchemaVo("王五","下午","2020-05-31"));
+        schemaVoList.add(new SchemaVo("王五","下午","2020-06-01"));
+        schemaVoList.add(new SchemaVo("李四","下午","2020-06-02"));
+        schemaVoList.add(new SchemaVo("李四","下午","2020-06-04"));
+        schemaVoList.add(new SchemaVo("孙七","晚上","2020-06-04"));
+        schemaVoList.add(new SchemaVo("张三","下午","2020-05-31"));
+        schemaVoList.add(new SchemaVo("赵六","晚上","2020-06-01"));
+        schemaVoList.add(new SchemaVo("张三","晚上","2020-06-04"));
+        schemaVoList.add(new SchemaVo("李四","上午","2020-05-31"));
+        schemaVoList.add(new SchemaVo("赵六","上午","2020-06-01"));
+        schemaVoList.add(new SchemaVo("张三","下午","2020-06-01"));
+        schemaVoList.add(new SchemaVo("赵六","下午","2020-05-31"));
+        schemaVoList.add(new SchemaVo("张三","下午","2020-06-02"));
+        schemaVoList.add(new SchemaVo("王五","上午","2020-05-31"));
+        schemaVoList.add(new SchemaVo("孙七","晚上","2020-05-31"));
+        schemaVoList.add(new SchemaVo("张三","晚上","2020-06-01"));
 
         return schemaVoList;
     }
@@ -69,7 +69,7 @@ public class ShowMeBug {
         String timeRangeDesc;
         int seqNo;
 
-        public TimeRangeVo(String timeRangeDesc, int seqNo){
+        public TimeRangeVo(String timeRangeDesc,int seqNo) {
             this.timeRangeDesc = timeRangeDesc;
             this.seqNo = seqNo;
         }
@@ -96,7 +96,7 @@ public class ShowMeBug {
         public String timeRangeDesc;
         public String schemaDate;
 
-        public SchemaVo(String doctorName, String timeRangeDesc, String schemaDate) {
+        public SchemaVo(String doctorName,String timeRangeDesc,String schemaDate) {
             this.doctorName = doctorName;
             this.timeRangeDesc = timeRangeDesc;
             this.schemaDate = schemaDate;

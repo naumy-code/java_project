@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.wyw.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -11,6 +11,9 @@ import java.util.Date;
 
 /**
  * @author xuan
+ * TestController redis
+ * 测试实现批量查询redis中的数据，实现能够查询数据后返回值 作者：谢基炫
+ * 使用到了spring-data-redis
  */
 @RestController
 @RequestMapping
@@ -729,14 +732,14 @@ public class TestController {
                 "9011D6LX0002",
                 "9011D6LX0018"
         };
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         for (String s : ss) {
-            Object o = restTemplate.opsForHash().get("OTA:VEHICLE_MESSAGE", s);
+            Object o = restTemplate.opsForHash().get("OTA:VEHICLE_MESSAGE",s);
             if (o != null) {
                 System.out.print(s);
                 String r = (String) o;
                 System.out.print("  :   ");
-                Long t = Long.parseLong(r.substring(r.length() - 14, r.length() - 1));
+                Long t = Long.parseLong(r.substring(r.length() - 14,r.length() - 1));
 
                 System.out.print(sdf.format(new Date(t)));
                 System.out.print("\n");
